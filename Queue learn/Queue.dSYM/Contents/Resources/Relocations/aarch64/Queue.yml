@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/aungphonemyat/Desktop/C for vs code/Queue learn/Queue'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x0, symBinAddr: 0x100003D44, symSize: 0x3C }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _front, symObjAddr: 0x228, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x5B, offset: 0x5B, size: 0x8, addend: 0x0, symName: _rear, symObjAddr: 0x22C, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _num, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x0, symBinAddr: 0x100003D44, symSize: 0x3C }
+  - { offsetInCU: 0xAC, offset: 0xAC, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x3C, symBinAddr: 0x100003D80, symSize: 0x3C }
+  - { offsetInCU: 0xC5, offset: 0xC5, size: 0x8, addend: 0x0, symName: _insertData, symObjAddr: 0x78, symBinAddr: 0x100003DBC, symSize: 0x68 }
+  - { offsetInCU: 0xE9, offset: 0xE9, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0xE0, symBinAddr: 0x100003E24, symSize: 0x9C }
+  - { offsetInCU: 0x10D, offset: 0x10D, size: 0x8, addend: 0x0, symName: _display, symObjAddr: 0x17C, symBinAddr: 0x100003EC0, symSize: 0x7C }
+  - { offsetInCU: 0x14D, offset: 0x14D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1F8, symBinAddr: 0x100003F3C, symSize: 0x30 }
+...
