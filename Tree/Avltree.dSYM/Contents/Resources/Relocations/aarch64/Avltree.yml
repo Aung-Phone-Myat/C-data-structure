@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/aungphonemyat/Desktop/C for vs code/Tree/Avltree'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _AVL_newNode, symObjAddr: 0x0, symBinAddr: 0x1000039EC, symSize: 0x54 }
+  - { offsetInCU: 0x86, offset: 0x86, size: 0x8, addend: 0x0, symName: _AVL_newNode, symObjAddr: 0x0, symBinAddr: 0x1000039EC, symSize: 0x54 }
+  - { offsetInCU: 0xBC, offset: 0xBC, size: 0x8, addend: 0x0, symName: _AVL_height, symObjAddr: 0x54, symBinAddr: 0x100003A40, symSize: 0x40 }
+  - { offsetInCU: 0xE4, offset: 0xE4, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0x94, symBinAddr: 0x100003A80, symSize: 0x48 }
+  - { offsetInCU: 0x11A, offset: 0x11A, size: 0x8, addend: 0x0, symName: _AVL_getbalance, symObjAddr: 0xDC, symBinAddr: 0x100003AC8, symSize: 0x6C }
+  - { offsetInCU: 0x142, offset: 0x142, size: 0x8, addend: 0x0, symName: _AVL_rightRotate, symObjAddr: 0x148, symBinAddr: 0x100003B34, symSize: 0xB8 }
+  - { offsetInCU: 0x186, offset: 0x186, size: 0x8, addend: 0x0, symName: _AVL_leftRotate, symObjAddr: 0x200, symBinAddr: 0x100003BEC, symSize: 0xB8 }
+  - { offsetInCU: 0x1CA, offset: 0x1CA, size: 0x8, addend: 0x0, symName: _AVL_insert, symObjAddr: 0x2B8, symBinAddr: 0x100003CA4, symSize: 0x258 }
+  - { offsetInCU: 0x20E, offset: 0x20E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x510, symBinAddr: 0x100003EFC, symSize: 0x70 }
+...

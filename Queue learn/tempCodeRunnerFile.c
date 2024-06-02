@@ -1,1 +1,1 @@
-printf("\n%d--%d\n", data, dataa);
+rear--;
