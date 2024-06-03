@@ -69,7 +69,13 @@ int main() {
     struct Node *root = NULL;
     root = insertNode(root, 8);
     root = insertNode(root, 3);
+    root = insertNode(root, 11);
     root = insertNode(root, 10);
-    root = deleteNode(root,8);
+    root = insertNode(root, 9);
+    root = insertNode(root, 12);
+    
+    root = insertNode(root, 13);
+    
+    root = deleteNode(root,12);
 
 }

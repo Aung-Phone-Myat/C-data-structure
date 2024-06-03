@@ -71,6 +71,7 @@ struct AVL_Node* AVL_insert (struct AVL_Node* node, int key) {
         printf("Error key cannot be same\n");
         return node;
     }
+     
     node->height = max(AVL_height(node->left), AVL_height(node->right)) + 1;
     int balance = AVL_getbalance(node);
 
@@ -91,6 +92,68 @@ struct AVL_Node* AVL_insert (struct AVL_Node* node, int key) {
         return node;
 }
 
+struct AVL_Node* findMin(struct AVL_Node* node) {
+    while (node->left != NULL) {
+        node = node->left;
+    }
+    return node;
+}
+
+struct AVL_Node* AVL_delete (struct AVL_Node* node, int key) {
+    if (node == NULL) {
+        return node;
+    }
+    if (key < node->key) {
+        node->left = AVL_delete(node->left, key);
+    } else if (key > node->key) {
+        node->right = AVL_delete(node->right, key);
+    } else {
+        if (node->left == NULL) {
+            struct AVL_Node *temp = node->right;
+            free(node);
+            return temp;
+        }
+        else if (node->right == NULL) {
+            struct AVL_Node *temp = node->left;
+            free(node);
+            return temp;
+        }
+        struct AVL_Node *temp = findMin(node->left);
+        node->key = temp->key;
+        node->right = AVL_delete(node->right, temp->key);
+    }
+    if (node == NULL) {
+        return node;
+    }
+    node->height = max(AVL_height(node->left), AVL_height(node->right)) + 1;
+    int balance = AVL_getbalance(node);
+
+    if (balance > 1 && key < node->left->key) {
+        return AVL_rightRotate(node);
+    }
+    if (balance < -1 && key > node->right->key) {
+        return AVL_leftRotate(node);
+    }
+    if (balance > 1 && key > node->left->key) {
+        node->left = AVL_leftRotate(node->left);
+        return AVL_rightRotate(node);
+    }
+    if (balance < -1 && key < node->right->key) {
+        node->right = AVL_rightRotate(node->right);
+        return AVL_leftRotate(node);
+    }
+        return node;
+
+}
+
+void preOrder(struct AVL_Node *node) {
+    if (node != NULL) {
+        printf("%d ", node->key);
+        preOrder(node->left);
+        preOrder(node->right);
+    }
+}
+
 int main () {
     struct AVL_Node *root = NULL;
     root = AVL_insert(root, 15);
@@ -98,4 +161,13 @@ int main () {
     root = AVL_insert(root, 12);
     root = AVL_insert(root, 11);
     root = AVL_insert(root, 13);
+
+    printf("Preorder traversal of the constructed AVL tree is: ");
+    preOrder(root);
+
+    root = AVL_delete(root, 10);
+    printf("\nPreorder traversal after deletion of 10: ");
+    preOrder(root);
+
+    return 0;
 }
